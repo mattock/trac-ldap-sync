@@ -1,0 +1,17 @@
+[ldap]
+ldap_uri = ldap://ldap.domain.com:389
+bind_dn = cn=admin,dc=domain,dc=com
+bind_pw = bind_pw
+basedn = ou=People,dc=domain,dc=com
+
+[database]
+db_user = trac
+db_password = db_password
+db_host = localhost
+db_port = 5432
+db_name = trac
+
+[email]
+source = root@trac.domain.com
+target = admin@domain.com
+smtp_host = localhost
