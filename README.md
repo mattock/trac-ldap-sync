@@ -10,7 +10,7 @@ information. This script should not need many changes to be useful in other
 LDAP/Trac+postgresql environments.
 
 
-PREQUISITES
+Prequisites
 ===========
 
 The script makes use of the following Python libraries:
@@ -23,7 +23,7 @@ The script makes use of the following Python libraries:
 Some of these are usually included in the distribution or easily installable 
 using the package manager.
 
-USAGE
+Usage
 =====
 
 First copy "config/ldapsync.conf.example" to "config/ldapsync.conf" and edit the 
@@ -40,7 +40,7 @@ Next simply run the script with
 If your configuration file is correct, you should get an email report telling 
 which Trac users had their email address copied over from LDAP.
 
-LICENSING
+Licensing
 =========
 
 This project is released under the BSD license (see file LICENSE for details).
