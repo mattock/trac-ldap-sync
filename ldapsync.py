@@ -76,7 +76,7 @@ class ldapsync():
         cur = conn.cursor()
 
         # Get all users, regardless of whether they have an email in Trac or not
-        cur.execute("SELECT sid FROM session_attribute WHERE authenticated=1")
+        cur.execute("SELECT sid FROM session WHERE authenticated=1")
 
         auth_sessions=[]
         while True:
