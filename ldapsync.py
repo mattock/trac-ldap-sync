@@ -12,7 +12,7 @@ class ldapsync():
     def __init__(self):
 
         config = ConfigParser.ConfigParser()
-        filename = "config/ldapsync.conf"
+        filename = "/etc/trac-ldap-sync.conf"
         try:
             config.readfp(open(filename))
         except IOError:

@@ -26,8 +26,8 @@ using the package manager.
 Usage
 =====
 
-First copy "config/ldapsync.conf.example" to "config/ldapsync.conf" and edit the 
-configuration to suit your environment.
+First copy "trac-ldap-sync.conf.example" to "/etc/trac-ldap-sync.conf" and edit 
+the configuration to suit your environment.
 
 If you want to do a dry-run first (recommended), either comment our the 
 "conn.commit()" line in ldapsync.py or edit the "self.include" list in 
@@ -47,4 +47,5 @@ This project is released under the BSD license (see file LICENSE for details).
 
 This script uses of pieces of code from an older BSD-licensed "perftest" script, 
 (C) 2011 OpenVPN Technologies, Inc. ConfigParser parts are to some extent (C) 
-2008 Samuli Seppänen.
+2008 Samuli Seppänen. The rest of the changes are (C) 2014 OpenVPN Technologies, 
+Inc. and (C) 2017 OpenVPN Inc.
