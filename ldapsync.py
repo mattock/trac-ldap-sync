@@ -65,7 +65,7 @@ class ldapsync():
                 email=result[0][1]['mail'][0]
                 results[username] = email
             except IndexError:
-                email=None
+                pass
 
         self.l.unbind()
         return results
@@ -122,9 +122,12 @@ class ldapsync():
         # if_ email address is missing from Trac
         changes=["Synced emails from LDAP for the following users: "]
         for user in users:
-            if user in self.include or self.include == []:
-                cur.execute("""INSERT INTO session_attribute (sid, authenticated, name, value) VALUES (%s, 1, 'email', %s);""", (user, userdict[user]))
-                changes.append("    %s" % (user))
+            try:
+                if user in self.include or self.include == []:
+                    cur.execute("""INSERT INTO session_attribute (sid, authenticated, name, value) VALUES (%s, 1, 'email', %s);""", (user, userdict[user]))
+                    changes.append("    %s" % (user))
+            except KeyError:
+                pass
 
         # Only send an email report if changes were made
         if len(changes) > 1:
